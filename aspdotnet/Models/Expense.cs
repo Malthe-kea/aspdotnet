@@ -7,6 +7,6 @@ namespace aspdotnet.Models
         public int Id { get; set; }
         public decimal Value { get; set; }
         [Required]
-        public string? Desciption { get; set; }
+        public string? Description { get; set; }
     }
 }
