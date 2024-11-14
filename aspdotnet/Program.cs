@@ -1,3 +1,6 @@
+using aspdotnet.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace aspdotnet
 {
     public class Program
@@ -9,6 +12,10 @@ namespace aspdotnet
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<AspdotnetDbContext>(options => 
+                options.UseInMemoryDatabase("AspdotnetDB")
+            );
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
